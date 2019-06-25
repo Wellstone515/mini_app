@@ -1,0 +1,11 @@
+<h3>ユーザー情報編集画面</h3>
+
+<%= form_for @user, method: :patch do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :email %>
+<%= f.submit "編集する" %>
+<% end %>
+
+
+
+

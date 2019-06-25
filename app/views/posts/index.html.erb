@@ -1,0 +1,21 @@
+<div class="content">
+
+
+  <% @posts.each do |post| %>
+  <div>
+    NAME :<%= link_to "#{post.user.name}", "users/#{post.user_id}/post" %><br>
+    DETE :<%= post.created_at %><br>
+    BODY :<%= post.body %><br>
+    <%= link_to "詳細", post_path(post.id) %>
+    <% if post.user == current_user %>
+    <%= link_to "編集", edit_post_path(post.id) %>
+    <%= link_to "削除", post_path(post.id), method: :delete %>
+    <br><br>
+    <% else %>
+    <br><br>
+    <% end %>
+  </div>
+  <% end %>
+
+
+</div>
