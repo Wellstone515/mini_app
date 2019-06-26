@@ -8,12 +8,12 @@
         <p class="grey-text text-darken-3"><%= @post.body %></p>
       </div>
       <div class="card-action">
-        <span class="grey-text text-darken-3"><%= @post.user.name %></span>
-        <span class="grey-text text-darken-3"><%= @post.created_at %></span>
+        <span class="grey-text text-darken-3"><%= @post.user.name %></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="grey-text text-darken-3"><%= @post.created_at.strftime('%Y年%m月%d日 %H:%M') %></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         <% if @post.user == current_user %>
-        <%= link_to "編集", edit_post_path(@post.id), class: "grey-text text-darken-3" %>
-        <%= link_to "削除", post_path(@post.id), method: :delete, class: "grey-text text-darken-3" %>
+        <%= link_to "", edit_post_path(@post.id), class: "grey-text text-darken-3 fas fa-wrench fa-lg" %>
+        <%= link_to "", post_path(@post.id), method: :delete, class: "grey-text text-darken-3 far fa-trash-alt fa-lg", data: { confirm: '削除しますか？' } %>
         <% end %>
 
       </div>
