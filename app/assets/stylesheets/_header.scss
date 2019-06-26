@@ -1,3 +1,9 @@
+nav {
+  position: fixed;
+  z-index: 10;
+}
+
 .nav-wrapper {
   padding: 0 70px;
+  position: fixed;
 }
