@@ -1,21 +1,24 @@
 <div class="content">
 
-
-  <% @posts.each do |post| %>
-  <div>
-    NAME :<%= link_to "#{post.user.name}", "users/#{post.user_id}/post" %><br>
-    DETE :<%= post.created_at %><br>
-    BODY :<%= post.body %><br>
-    <%= link_to "詳細", post_path(post.id) %>
-    <% if post.user == current_user %>
-    <%= link_to "編集", edit_post_path(post.id) %>
-    <%= link_to "削除", post_path(post.id), method: :delete %>
-    <br><br>
-    <% else %>
-    <br><br>
-    <% end %>
+<% @posts.each do |post| %>
+<div class="row">
+  <div class="col s12 m2"></div>
+  <div class="col s12 m8">
+    <div class="card grey lighten-3">
+      <div class="card-content">
+        <p class="grey-text text-darken-3"><%= post.body %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to "", post_path(post.id), class: "grey-text text-darken-3 fas fa-info-circle fa-lg" %>
+        <% if post.user == current_user %>
+        <%= link_to "", edit_post_path(post.id), class: "grey-text text-darken-3 fas fa-wrench fa-lg" %>
+        <%= link_to "", post_path(post.id), method: :delete, class: "grey-text text-darken-3 far fa-trash-alt fa-lg" %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <% end %>
-
+</div>
+<div class="col s12 m2"></div>
+<% end %>
 
 </div>

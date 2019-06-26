@@ -1,9 +1,11 @@
-<p>編集画面</p>
+<div class="content_max_vh">
 
 <%= form_for @post, method: :patch do |f| %>
-<%= f.text_field :body %>
+<%= f.text_area :body %>
 <%= f.submit "編集する" %>
 <% end %>
+
+</div>
 
 
 

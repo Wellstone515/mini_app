@@ -1,6 +1,13 @@
+<div class="content_max_vh">
+
 <%= form_for @post, url: posts_path do |f| %>
-<%= f.text_field :body, placeholder: "投稿内容を記載" %>
-<%= f.submit "投稿する" %>
+<%= f.text_area :body, placeholder: "投稿内容を記載", :size => "20x10" %>
+<button class="btn waves-effect waves-light" type="submit" name="action">
+  <%= f.submit "投稿する" %>
+  <i class="material-icons right">send</i>
+</button>
 <% end %>
+
+</div>
 
 
