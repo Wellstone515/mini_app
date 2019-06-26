@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy if post.user_id == current_user.id
-    redirect_to controller: :posts, action: :index
+    redirect_to controller: :posts, action: :index, alert: '削除？'
   end
 
   private
