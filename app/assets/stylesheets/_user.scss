@@ -2,9 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.log_in_button {
+  margin: 15px 0;
+}
+
+.sign_in_up_text {
+  font-family: YuGothic, sans-serif;
+}
+
+.log_in_text {
+  font-family: YuGothic, sans-serif;
+}
 
 .user_edit_title {
-  text-align: center;
   margin: 20px 0 40px;
 }
 
