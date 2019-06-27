@@ -30,4 +30,14 @@ textarea {
   margin-top: 20px;
 }
 
+.new_text_field::placeholder {
+  font-size: 30px;
+}
+
+.edit_text_area {
+  border-width: 2px;
+  border-color: #bdbdbd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
 
