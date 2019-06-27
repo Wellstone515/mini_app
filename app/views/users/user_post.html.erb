@@ -1,0 +1,20 @@
+<% if @user == current_user %>
+<p>あなたの投稿一覧</p>
+<% else %>
+<p><%= @user.name %>さんの投稿一覧</p>
+<% end %>
+
+<% @posts.each do |post| %>
+<div>
+  DATE :<%= post.created_at %><br>
+  BODY :<%= post.body %><br>
+  <%= link_to "詳細", post_path(post.id) %>
+  <% if @user == current_user %>
+  <%= link_to "編集", edit_post_path(post.id) %>
+  <%= link_to "削除", post_path(post.id), method: :delete %>
+  <br><br>
+  <% else %>
+  <br><br>
+  <% end %>
+  <% end %>
+</div>

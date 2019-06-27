@@ -1,0 +1,36 @@
+<div class="content_max_vh">
+
+  <div class="row">
+    <div class="col l4"></div>
+    <div class="col l4">
+      <h4 class="user_edit_title"><i class="fas fa-user-edit"></i>&emsp;ユーザー情報編集</h4>
+      <%= form_for @user, method: :patch do |f| %>
+      <div class="row">
+        <div class="input-field col l12">
+          <div id="first_name" type="text" class="validate"><%= f.text_field :name %></div>
+          <label class="active" for="first_name2">Name</label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <div id="email" type="email" class="validate"><%= f.text_field :email %></div>
+          <label class="active" for="first_name2">Email</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light edit_button" type="submit" name="action">
+      <%= f.submit "編集する" %>
+      <i class="material-icons right">build</i>
+      </button>
+    </div>
+    <div class="col l4"></div>
+  </div>
+
+
+  <% end %>
+</div>
+
+
+
+

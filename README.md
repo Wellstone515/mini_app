@@ -15,9 +15,10 @@
 
  ## posts table
 
- |    Column    |  Type  |   Options
- |--------------|--------|------------------
- |     body     |  text  | null: false
+ |    Column    |  Type     |   Options
+ |--------------|-----------|------------------
+ |     body     |  text     | null: false
+ |    user_id   |references | null: false, foreeign_key: true
 
  ### Association
 
