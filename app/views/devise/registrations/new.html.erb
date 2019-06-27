@@ -1,4 +1,4 @@
-<div class="content_max_vh">
+<div class="log_in_background">
 
 
   <div class="row">
@@ -11,26 +11,26 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%=f.label :name %></em><br />
-        <%= f.text_field :name, autofocus: true %>
+        <%=f.label :name, class: "grey-text text-lighten-4" %></em><br />
+        <%= f.text_field :name, autofocus: true, class: "grey lighten-4" %>
       </div>
 
       <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.label :email, class: "grey-text text-lighten-4" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "grey lighten-4" %>
       </div>
 
       <div class="field">
-        <%= f.label :password %>
+        <%= f.label :password, class: "grey-text text-lighten-4" %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em class="grey-text text-lighten-4">(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "grey lighten-4" %>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.label :password_confirmation, class: "grey-text text-lighten-4" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "grey lighten-4" %>
       </div>
 
         <div class="actions">
